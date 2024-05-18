@@ -1,0 +1,290 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4wfu27t66tcm"]
+
+[ext_resource type="Script" path="res://UI Scenes/overview.gd" id="1_jqkqo"]
+[ext_resource type="PackedScene" uid="uid://c5sghegepawr2" path="res://UI Scenes/Overview Tabs/threat_feed.tscn" id="2_je5d2"]
+[ext_resource type="PackedScene" uid="uid://ck6nnsw7sapke" path="res://UI Scenes/Overview Tabs/threat_intel_item.tscn" id="2_xvktf"]
+
+[node name="Overview" type="Control"]
+custom_minimum_size = Vector2(500, 330)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 500.0
+offset_bottom = 300.0
+mouse_filter = 1
+script = ExtResource("1_jqkqo")
+threat_intel_item_scene = ExtResource("2_xvktf")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+custom_minimum_size = Vector2(500, 330)
+layout_mode = 0
+offset_right = 29.0
+offset_bottom = 164.0
+current_tab = 1
+
+[node name="Overview" type="MarginContainer" parent="TabContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Overview"]
+layout_mode = 2
+
+[node name="Gap" type="MarginContainer" parent="TabContainer/Overview/VBoxContainer"]
+layout_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="TabContainer/Overview/VBoxContainer/Gap"]
+layout_mode = 2
+
+[node name="Organisation" type="MarginContainer" parent="TabContainer/Overview/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Overview/VBoxContainer/Organisation"]
+layout_mode = 2
+
+[node name="ItemName" type="Label" parent="TabContainer/Overview/VBoxContainer/Organisation/HBoxContainer"]
+layout_mode = 2
+text = "Organisation"
+
+[node name="ItemProperty" type="Label" parent="TabContainer/Overview/VBoxContainer/Organisation/HBoxContainer"]
+layout_mode = 2
+text = "Atwell"
+
+[node name="Reputation" type="MarginContainer" parent="TabContainer/Overview/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Overview/VBoxContainer/Reputation"]
+layout_mode = 2
+
+[node name="ItemName" type="Label" parent="TabContainer/Overview/VBoxContainer/Reputation/HBoxContainer"]
+layout_mode = 2
+text = "Reputation"
+
+[node name="ItemProperty" type="Label" parent="TabContainer/Overview/VBoxContainer/Reputation/HBoxContainer"]
+layout_mode = 2
+text = "Atwell"
+
+[node name="Locations" type="MarginContainer" parent="TabContainer/Overview/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Overview/VBoxContainer/Locations"]
+layout_mode = 2
+
+[node name="ItemName" type="Label" parent="TabContainer/Overview/VBoxContainer/Locations/HBoxContainer"]
+layout_mode = 2
+text = "Locations"
+
+[node name="ItemProperty" type="Label" parent="TabContainer/Overview/VBoxContainer/Locations/HBoxContainer"]
+layout_mode = 2
+text = "Atwell"
+
+[node name="Breaches" type="MarginContainer" parent="TabContainer/Overview/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Overview/VBoxContainer/Breaches"]
+layout_mode = 2
+
+[node name="ItemName" type="Label" parent="TabContainer/Overview/VBoxContainer/Breaches/HBoxContainer"]
+layout_mode = 2
+text = "Total Breaches"
+
+[node name="ItemProperty" type="Label" parent="TabContainer/Overview/VBoxContainer/Breaches/HBoxContainer"]
+layout_mode = 2
+text = "Atwell"
+
+[node name="Defended" type="MarginContainer" parent="TabContainer/Overview/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Overview/VBoxContainer/Defended"]
+layout_mode = 2
+
+[node name="ItemName" type="Label" parent="TabContainer/Overview/VBoxContainer/Defended/HBoxContainer"]
+layout_mode = 2
+text = "Attacks Defended"
+
+[node name="ItemProperty" type="Label" parent="TabContainer/Overview/VBoxContainer/Defended/HBoxContainer"]
+layout_mode = 2
+text = "Atwell"
+
+[node name="Severity" type="MarginContainer" parent="TabContainer/Overview/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Overview/VBoxContainer/Severity"]
+layout_mode = 2
+
+[node name="ItemName" type="Label" parent="TabContainer/Overview/VBoxContainer/Severity/HBoxContainer"]
+layout_mode = 2
+text = "Avg. Threat Severity"
+
+[node name="ItemProperty" type="Label" parent="TabContainer/Overview/VBoxContainer/Severity/HBoxContainer"]
+layout_mode = 2
+text = "Atwell"
+
+[node name="Controls" type="MarginContainer" parent="TabContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Controls"]
+layout_mode = 2
+
+[node name="DescriptionMargin" type="MarginContainer" parent="TabContainer/Controls/VBoxContainer"]
+layout_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="TabContainer/Controls/VBoxContainer/DescriptionMargin"]
+layout_mode = 2
+
+[node name="ControlContainer" type="MarginContainer" parent="TabContainer/Controls/VBoxContainer"]
+layout_mode = 2
+
+[node name="ControlItem" type="HBoxContainer" parent="TabContainer/Controls/VBoxContainer/ControlContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Controls/VBoxContainer/ControlContainer/ControlItem"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Controls/VBoxContainer/ControlContainer/ControlItem/MarginContainer"]
+layout_mode = 2
+
+[node name="ControlName" type="Label" parent="TabContainer/Controls/VBoxContainer/ControlContainer/ControlItem/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Time Passed (per second)"
+
+[node name="InfoButton4" type="Button" parent="TabContainer/Controls/VBoxContainer/ControlContainer/ControlItem/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "6 hours"
+
+[node name="InfoButton" type="Button" parent="TabContainer/Controls/VBoxContainer/ControlContainer/ControlItem/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "12 hrs"
+
+[node name="InfoButton2" type="Button" parent="TabContainer/Controls/VBoxContainer/ControlContainer/ControlItem/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "1 day"
+
+[node name="InfoButton3" type="Button" parent="TabContainer/Controls/VBoxContainer/ControlContainer/ControlItem/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "2 days"
+
+[node name="ControlContainer2" type="MarginContainer" parent="TabContainer/Controls/VBoxContainer"]
+layout_mode = 2
+
+[node name="ControlItem" type="HBoxContainer" parent="TabContainer/Controls/VBoxContainer/ControlContainer2"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Controls/VBoxContainer/ControlContainer2/ControlItem"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Controls/VBoxContainer/ControlContainer2/ControlItem/MarginContainer"]
+layout_mode = 2
+
+[node name="ControlName" type="Label" parent="TabContainer/Controls/VBoxContainer/ControlContainer2/ControlItem/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Threat Feed Notification"
+
+[node name="InfoButton4" type="Button" parent="TabContainer/Controls/VBoxContainer/ControlContainer2/ControlItem/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "ON"
+
+[node name="InfoButton" type="Button" parent="TabContainer/Controls/VBoxContainer/ControlContainer2/ControlItem/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "OFF"
+
+[node name="ControlContainer3" type="MarginContainer" parent="TabContainer/Controls/VBoxContainer"]
+layout_mode = 2
+
+[node name="ControlItem" type="HBoxContainer" parent="TabContainer/Controls/VBoxContainer/ControlContainer3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Controls/VBoxContainer/ControlContainer3/ControlItem"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Controls/VBoxContainer/ControlContainer3/ControlItem/MarginContainer"]
+layout_mode = 2
+
+[node name="ControlName" type="Label" parent="TabContainer/Controls/VBoxContainer/ControlContainer3/ControlItem/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Set Speed to \"6 Hours\" when attacked"
+
+[node name="InfoButton4" type="Button" parent="TabContainer/Controls/VBoxContainer/ControlContainer3/ControlItem/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "ON"
+
+[node name="InfoButton" type="Button" parent="TabContainer/Controls/VBoxContainer/ControlContainer3/ControlItem/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "OFF"
+
+[node name="Criteria" type="MarginContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="CriteriaVBox" type="VBoxContainer" parent="TabContainer/Criteria"]
+layout_mode = 2
+
+[node name="DescriptionMargin" type="MarginContainer" parent="TabContainer/Criteria/CriteriaVBox"]
+layout_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="TabContainer/Criteria/CriteriaVBox/DescriptionMargin"]
+layout_mode = 2
+
+[node name="ObjectivesSection" type="VBoxContainer" parent="TabContainer/Criteria/CriteriaVBox"]
+layout_mode = 2
+
+[node name="ObjectivesMargin" type="MarginContainer" parent="TabContainer/Criteria/CriteriaVBox/ObjectivesSection"]
+layout_mode = 2
+
+[node name="ObjectivesLabel" type="Label" parent="TabContainer/Criteria/CriteriaVBox/ObjectivesSection/ObjectivesMargin"]
+layout_mode = 2
+
+[node name="ObjectiveItem" type="HBoxContainer" parent="TabContainer/Criteria/CriteriaVBox/ObjectivesSection"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/Criteria/CriteriaVBox/ObjectivesSection/ObjectiveItem"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Criteria/CriteriaVBox/ObjectivesSection/ObjectiveItem"]
+layout_mode = 2
+
+[node name="FailSection" type="VBoxContainer" parent="TabContainer/Criteria/CriteriaVBox"]
+layout_mode = 2
+
+[node name="FailMargin" type="MarginContainer" parent="TabContainer/Criteria/CriteriaVBox/FailSection"]
+layout_mode = 2
+
+[node name="FailLabel" type="Label" parent="TabContainer/Criteria/CriteriaVBox/FailSection/FailMargin"]
+layout_mode = 2
+
+[node name="FailItem" type="HBoxContainer" parent="TabContainer/Criteria/CriteriaVBox/FailSection"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/Criteria/CriteriaVBox/FailSection/FailItem"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Criteria/CriteriaVBox/FailSection/FailItem"]
+layout_mode = 2
+
+[node name="Threat Intel" type="MarginContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Threat Intel"]
+layout_mode = 2
+
+[node name="ThreatIntelList" type="VBoxContainer" parent="TabContainer/Threat Intel/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DescriptionMargin" type="MarginContainer" parent="TabContainer/Threat Intel/ScrollContainer/ThreatIntelList"]
+layout_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="TabContainer/Threat Intel/ScrollContainer/ThreatIntelList/DescriptionMargin"]
+layout_mode = 2
+
+[node name="Threat Feed" parent="TabContainer" instance=ExtResource("2_je5d2")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

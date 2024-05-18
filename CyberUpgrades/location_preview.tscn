@@ -1,0 +1,250 @@
+[gd_scene load_steps=3 format=3 uid="uid://srkcryceogmp"]
+
+[ext_resource type="Texture2D" uid="uid://buj0485inqo2p" path="res://Art/Nigeria Pix.png" id="1_b2up3"]
+[ext_resource type="Script" path="res://CyberUpgrades/location_preview.gd" id="1_l47cr"]
+
+[node name="LocationPreview" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 500.0
+offset_bottom = 210.0
+script = ExtResource("1_l47cr")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+offset_right = 500.0
+offset_bottom = 210.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="LocationOverview" type="HBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="LocationImage" type="TextureRect" parent="PanelContainer/MarginContainer/LocationOverview"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_b2up3")
+
+[node name="Information" type="VBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InformationLabels" type="HBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Descriptions" type="VBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels"]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="LocationName" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/Descriptions"]
+layout_mode = 2
+text = "Country: Nigeria"
+
+[node name="CityName" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/Descriptions"]
+layout_mode = 2
+text = "City: Abuja"
+
+[node name="OfficeType" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/Descriptions"]
+layout_mode = 2
+text = "Office: 2nd Floor"
+
+[node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ControlStrengths" type="VBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Physical" type="HBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PLabel" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths/Physical"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Physical"
+
+[node name="PValue" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths/Physical"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Web" type="HBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="WLabel" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths/Web"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Web"
+
+[node name="WValue" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths/Web"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Network" type="HBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NLabel" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths/Network"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Network"
+
+[node name="NValue" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths/Network"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Asset" type="HBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ALabel" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths/Asset"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Asset"
+
+[node name="AValue" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths/Asset"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Identity" type="HBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ILabel" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths/Identity"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Identity"
+
+[node name="IValue" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths/Identity"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0%"
+horizontal_alignment = 2
+
+[node name="Reputation" type="HBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RLabel" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths/Reputation"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reputation"
+
+[node name="RValue" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/InformationLabels/ControlStrengths/Reputation"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 2
+
+[node name="ServiceStates" type="HBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="C" type="HBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information/ServiceStates"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Confidentiality" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/ServiceStates/C"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Conf."
+horizontal_alignment = 2
+
+[node name="CStatus" type="ColorRect" parent="PanelContainer/MarginContainer/LocationOverview/Information/ServiceStates/C"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 2
+color = Color(0.188235, 0.592157, 0.219608, 1)
+
+[node name="I" type="HBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information/ServiceStates"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Integrity" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/ServiceStates/I"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Int."
+horizontal_alignment = 2
+
+[node name="IStatus" type="ColorRect" parent="PanelContainer/MarginContainer/LocationOverview/Information/ServiceStates/I"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 2
+color = Color(0.188235, 0.592157, 0.219608, 1)
+
+[node name="A" type="HBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information/ServiceStates"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.2
+
+[node name="Availability" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/ServiceStates/A"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Avail."
+horizontal_alignment = 2
+
+[node name="AStatus" type="ColorRect" parent="PanelContainer/MarginContainer/LocationOverview/Information/ServiceStates/A"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 2
+color = Color(0.188235, 0.592157, 0.219608, 1)
+
+[node name="R" type="HBoxContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information/ServiceStates"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Reputation" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/ServiceStates/R"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Rep."
+horizontal_alignment = 2
+
+[node name="RStatus" type="ColorRect" parent="PanelContainer/MarginContainer/LocationOverview/Information/ServiceStates/R"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 2
+color = Color(0.188235, 0.592157, 0.219608, 1)
+
+[node name="CenterContainer" type="FlowContainer" parent="PanelContainer/MarginContainer/LocationOverview/Information"]
+layout_mode = 2
+alignment = 1
+
+[node name="ThreatStatus" type="ColorRect" parent="PanelContainer/MarginContainer/LocationOverview/Information/CenterContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 23)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.188235, 0.592157, 0.219608, 1)
+
+[node name="ThreatLabel" type="Label" parent="PanelContainer/MarginContainer/LocationOverview/Information/CenterContainer/ThreatStatus"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 286.0
+offset_bottom = 23.0
+size_flags_horizontal = 3
+text = "Threat Status: Healthy"
+horizontal_alignment = 1

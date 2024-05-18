@@ -1,0 +1,37 @@
+[gd_scene load_steps=22 format=3 uid="uid://b8n1cv4f7oo2o"]
+
+[ext_resource type="PackedScene" uid="uid://cxh2pxhjq8xbk" path="res://UI Scenes/background.tscn" id="1_eohhm"]
+[ext_resource type="Script" path="res://UI Scenes/game_manager.gd" id="1_lpy3p"]
+[ext_resource type="PackedScene" uid="uid://cb1j2stdbvkr1" path="res://MapScenes/location.tscn" id="2_c7svj"]
+[ext_resource type="PackedScene" uid="uid://due3queqbqi3j" path="res://UI Scenes/top_menu.tscn" id="2_e1vit"]
+[ext_resource type="Texture2D" uid="uid://pr1s88mheuuc" path="res://Art/SanFran Pix.png" id="5_261gb"]
+[ext_resource type="PackedScene" uid="uid://c4wfu27t66tcm" path="res://UI Scenes/overview.tscn" id="5_jigia"]
+[ext_resource type="PackedScene" uid="uid://bbhpsheh4bin6" path="res://UI Scenes/user_prompt.tscn" id="6_0n8j7"]
+[ext_resource type="Texture2D" uid="uid://fe7c6n5kmqdk" path="res://Art/NewYork Pix.png" id="6_kjdxt"]
+[ext_resource type="Texture2D" uid="uid://bhhpj68k1j2sh" path="res://Art/Toronto Pix.png" id="7_27mui"]
+[ext_resource type="Texture2D" uid="uid://bm3jcmkxbuq22" path="res://Art/SaoPaolo Pix.png" id="8_c3obl"]
+[ext_resource type="Texture2D" uid="uid://buj0485inqo2p" path="res://Art/Nigeria Pix.png" id="9_4vrd8"]
+[ext_resource type="Texture2D" uid="uid://cxax5yyjn5sbt" path="res://Art/CapeTown Pix.png" id="10_0my62"]
+[ext_resource type="Texture2D" uid="uid://do3pnr2r83nv" path="res://Art/Barcelona Pix.png" id="11_42qr0"]
+[ext_resource type="Texture2D" uid="uid://cffst7uoayril" path="res://Art/Paris Pix.png" id="12_x8ai3"]
+[ext_resource type="Texture2D" uid="uid://bm1y4oue64dw5" path="res://Art/London Pix.png" id="13_vytpm"]
+[ext_resource type="Texture2D" uid="uid://dpyte7clx3wwr" path="res://Art/NewDelhi Pix.png" id="14_jqp0a"]
+[ext_resource type="Texture2D" uid="uid://cu7e21f3c8m0g" path="res://Art/Beijing Pix.png" id="15_808o2"]
+[ext_resource type="Texture2D" uid="uid://dlh2o4ec8xk6c" path="res://Art/Tokyo Pix.png" id="16_nt8gs"]
+[ext_resource type="Texture2D" uid="uid://xyl3g6yknbos" path="res://Art/Canberra Pix.png" id="17_sgd6h"]
+[ext_resource type="Texture2D" uid="uid://bx1fveo2uywkt" path="res://Art/Warsaw Pix.png" id="18_fm1cq"]
+[ext_resource type="Texture2D" uid="uid://cktdi7a16m15v" path="res://Art/Stockholm Pix.png" id="19_aioxl"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_lpy3p")
+background_scene = ExtResource("1_eohhm")
+top_menu_scene = ExtResource("2_e1vit")
+location = ExtResource("2_c7svj")
+overview_scene = ExtResource("5_jigia")
+user_prompt = ExtResource("6_0n8j7")
+city_pics = Array[Texture2D]([ExtResource("5_261gb"), ExtResource("6_kjdxt"), ExtResource("7_27mui"), ExtResource("8_c3obl"), ExtResource("9_4vrd8"), ExtResource("10_0my62"), ExtResource("11_42qr0"), ExtResource("12_x8ai3"), ExtResource("13_vytpm"), ExtResource("14_jqp0a"), ExtResource("15_808o2"), ExtResource("16_nt8gs"), ExtResource("17_sgd6h"), ExtResource("18_fm1cq"), ExtResource("19_aioxl")])
+next_threat_wait_time = Array[float]([10.0, 20.0])
+
+[node name="GameTimer" type="Timer" parent="." groups=["timer"]]
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

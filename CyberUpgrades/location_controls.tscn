@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddub8dklx6cbq"]
+
+[ext_resource type="PackedScene" uid="uid://srkcryceogmp" path="res://CyberUpgrades/location_preview.tscn" id="1_j18kf"]
+[ext_resource type="PackedScene" uid="uid://dh5so7qjmi0x4" path="res://CyberUpgrades/cyber_controls_box.tscn" id="2_cxm56"]
+
+[node name="LocationControls" type="Node"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 502.0
+offset_bottom = 354.0
+
+[node name="LocationPreview" parent="HBoxContainer" instance=ExtResource("1_j18kf")]
+layout_mode = 2
+
+[node name="CyberControlsBox" parent="HBoxContainer" instance=ExtResource("2_cxm56")]
+layout_mode = 2
